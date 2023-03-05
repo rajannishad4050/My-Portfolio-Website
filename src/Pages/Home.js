@@ -6,6 +6,12 @@ const Home = ({ runHomeWheel, setFirstBack, setHomeButtonClick }) => {
   return (
     <>
       <section className="home" onWheel={runHomeWheel}>
+        <p className="github">
+          <a className="github-link" href="https://github.com/rajannishad4050">
+            GitHub
+          </a>
+        </p>
+
         <div className="context">
           <div className="text">
             Hello, I'm <span>Rajan Nishad.</span>

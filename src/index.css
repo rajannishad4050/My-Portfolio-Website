@@ -163,6 +163,20 @@ Header {
   position: relative;
 }
 
+.github {
+  position: relative;
+  text-align: end;
+  padding-top: 20px;
+  padding-right: 70px;
+  font-size: 1.19rem;
+  z-index: 9999;
+}
+
+.github-link {
+  all: unset;
+  cursor: pointer;
+}
+
 .context {
   position: absolute;
   width: 100%;
@@ -633,6 +647,7 @@ Header {
 }
 
 .project-container {
+  all: unset;
   position: relative;
   display: grid;
   cursor: pointer;
