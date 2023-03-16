@@ -28,7 +28,9 @@ const About = ({ runAboutWheel, firstScroll }) => {
           <div className="about-flex-container">
             <div className="about-section-a">
               <div className="about-section-a-wrapper">
-                <div className="img-container"></div>
+                <div className="img-container">
+                  <img src="rajan_img.jpg" alt="" className="photo" />
+                </div>
                 <h1 className="question">Who's this guy?</h1>
                 <p className="about-me">
                   I'm a Front-End Developer. I have serious passion for coding,
