@@ -11,7 +11,6 @@ const Home = ({ runHomeWheel, setFirstBack, setHomeButtonClick }) => {
             GitHub
           </a>
         </p>
-
         <div className="context">
           <div className="text">
             Hello, I'm <span>Rajan Nishad.</span>

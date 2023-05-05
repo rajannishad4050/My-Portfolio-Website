@@ -29,12 +29,12 @@ const About = ({ runAboutWheel, firstScroll }) => {
             <div className="about-section-a">
               <div className="about-section-a-wrapper">
                 <div className="img-container">
-                  <img src="rajan_img.jpg" alt="" className="photo" />
+                  <img src="hello.svg" alt="" className="photo" />
                 </div>
-                <h1 className="question">Who's this guy?</h1>
+                <h1 className="question">Hi! There</h1>
                 <p className="about-me">
-                  I'm a Front-End Developer. I have serious passion for coding,
-                  animations and creating intuitive, dynamic user experience.
+                  I am Rajan NIshad. I'm a Front-End Developer and I have
+                  serious passion for coding and love to create invotive design
                 </p>
                 <div className="contact-link">
                   Let's make something special.
