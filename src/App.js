@@ -199,6 +199,7 @@ const App = () => {
         <Home
           runHomeWheel={runHomeWheel}
           setFirstBack={setFirstBack}
+          setFirstScroll={setFirstScroll}
           setHomeButtonClick={setHomeButtonClick}
         />
 

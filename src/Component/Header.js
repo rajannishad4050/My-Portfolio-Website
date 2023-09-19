@@ -14,7 +14,13 @@ const Header = () => {
     <>
       <header>
         <div className="header-top-section">
-          <div onClick={() => setActive(!active)} className="bar-icon">
+          <div
+            onClick={() => {
+              setActive(!active);
+              console.log("hello");
+            }}
+            className="bar-icon"
+          >
             <div className="bar-line"></div>
             <div className={active ? "bar-line shift" : "bar-line"}></div>
             <div className="bar-line"></div>

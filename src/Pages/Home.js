@@ -2,15 +2,20 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import Header from "../Component/Header";
 
-const Home = ({ runHomeWheel, setFirstBack, setHomeButtonClick }) => {
+const Home = ({
+  runHomeWheel,
+  setFirstBack,
+  setFirstScroll,
+  setHomeButtonClick,
+}) => {
   return (
     <>
       <section className="home" onWheel={runHomeWheel}>
-        <p className="github">
+        {/* <p className="github">
           <a className="github-link" href="https://github.com/rajannishad4050">
             GitHub
           </a>
-        </p>
+        </p> */}
         <div className="context">
           <div className="text">
             Hello, I'm <span>Rajan Nishad.</span>
@@ -20,8 +25,11 @@ const Home = ({ runHomeWheel, setFirstBack, setHomeButtonClick }) => {
           <div
             className="home-btn"
             onClick={() => {
-              setFirstBack(false);
-              setHomeButtonClick(true);
+              if (window.innerWidth >= 800 && window.innerHeight >= 480) {
+                setFirstBack(false);
+                setFirstScroll(true);
+                setHomeButtonClick(true);
+              }
             }}
           >
             <p> View my work</p>
