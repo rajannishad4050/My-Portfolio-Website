@@ -1003,11 +1003,11 @@ textarea {
     width: 100%;
     height: 100vh;
     padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .contact {
-    padding-top: 25px;
-  }
 
   .contact-title {
     transition: 0.5s ease;
