@@ -1006,8 +1006,12 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
+  .contact-area {
+    width: 100%;
+  }
 
   .contact-title {
     transition: 0.5s ease;
