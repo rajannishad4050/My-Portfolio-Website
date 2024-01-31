@@ -4,8 +4,18 @@ import "../Styles/home.css";
 
 const Home = () => {
   const handleHomeButtonClicked = () => {
-    document.body.scrollTop = 1312; // For Safari
-    document.documentElement.scrollTop = 1312;
+    const windowWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    if (windowWidth >= 800) {
+      document.body.scrollTop = 1312; // For Safari
+      document.documentElement.scrollTop = 1312;
+    } else {
+      document.body.scrollTop = 1580; // For Safari
+      document.documentElement.scrollTop = 1580;
+    }
   };
 
   return (

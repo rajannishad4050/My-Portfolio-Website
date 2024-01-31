@@ -17,23 +17,46 @@ const Header = () => {
   };
 
   const handleProjectButtonClicked = () => {
-    document.body.scrollTop = 1312; // For Safari
-    document.documentElement.scrollTop = 1312;
+    const windowWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    if (windowWidth >= 800) {
+      document.body.scrollTop = 1312; // For Safari
+      document.documentElement.scrollTop = 1312;
+    } else {
+      document.body.scrollTop = 1580; // For Safari
+      document.documentElement.scrollTop = 1580;
+    }
+
     setActive(false);
   };
 
   const handleContactButtonClicked = () => {
-    document.body.scrollTop = 2822; // For Safari
-    document.documentElement.scrollTop = 2822;
+    const windowWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    if (windowWidth >= 800) {
+      document.body.scrollTop = 2822; // For Safari
+      document.documentElement.scrollTop = 2822;
+    } else {
+      document.body.scrollTop = 3535; // For Safari
+      document.documentElement.scrollTop = 3535;
+    }
+
     setActive(false);
   };
 
   //a = 653 p = 1312 c= 2822
-  // useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //     console.log(document.documentElement.scrollTop, document.body.scrollTop);
-  //   });
-  // }, []);
+  //a = 1580 b= 3535
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      console.log(document.documentElement.scrollTop, document.body.scrollTop);
+    });
+  }, []);
 
   return (
     <>
