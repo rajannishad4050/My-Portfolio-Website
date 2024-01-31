@@ -11,8 +11,18 @@ const Header = () => {
   };
 
   const handleAboutButtonClicked = () => {
-    document.body.scrollTop = 650; // For Safari
-    document.documentElement.scrollTop = 650;
+    const windowWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    if (windowWidth >= 800) {
+      document.body.scrollTop = 650; // For Safari
+      document.documentElement.scrollTop = 650;
+    } else {
+      document.body.scrollTop = 540; // For Safari
+      document.documentElement.scrollTop = 540;
+    }
     setActive(false);
   };
 
@@ -26,8 +36,8 @@ const Header = () => {
       document.body.scrollTop = 1312; // For Safari
       document.documentElement.scrollTop = 1312;
     } else {
-      document.body.scrollTop = 1580; // For Safari
-      document.documentElement.scrollTop = 1580;
+      document.body.scrollTop = 1464; // For Safari
+      document.documentElement.scrollTop = 1464;
     }
 
     setActive(false);
@@ -43,12 +53,18 @@ const Header = () => {
       document.body.scrollTop = 2822; // For Safari
       document.documentElement.scrollTop = 2822;
     } else {
-      document.body.scrollTop = 3535; // For Safari
-      document.documentElement.scrollTop = 3535;
+      document.body.scrollTop = 3294; // For Safari
+      document.documentElement.scrollTop = 3294;
     }
 
     setActive(false);
   };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     console.log(document.documentElement.scrollTop, document.body.scrollTop);
+  //   });
+  // }, []);
 
   return (
     <>
