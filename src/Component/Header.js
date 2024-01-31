@@ -50,14 +50,6 @@ const Header = () => {
     setActive(false);
   };
 
-  //a = 653 p = 1312 c= 2822
-  //a = 1580 b= 3535
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      console.log(document.documentElement.scrollTop, document.body.scrollTop);
-    });
-  }, []);
-
   return (
     <>
       <header className={active ? "bg-black" : ""}>
