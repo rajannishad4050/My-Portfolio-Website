@@ -61,18 +61,3 @@ div {
 .bg-blue {
   background-color: #81256a;
 }
-
-/*  */
-
-.scroller {
-  display: none;
-  width: 15px;
-  height: 40px;
-  background-color: white;
-  z-index: 1000;
-  border-radius: 8px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transition: 1s ease;
-}

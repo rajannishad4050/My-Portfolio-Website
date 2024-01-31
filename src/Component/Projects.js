@@ -33,7 +33,12 @@ const Portfolio = () => {
                 currency of other countries and make profit. This is a
                 simualation website through which you can learn Forex Trading
               </div>
-              <button className="project-btn">see</button>
+              <a
+                href="https://forex-trading-simulator.netlify.app"
+                className="project-btn"
+              >
+                see
+              </a>
             </div>
           </div>
           <div className="project-container">
@@ -48,7 +53,12 @@ const Portfolio = () => {
                 This is a clone website in which i have cloned the zomato
                 website homepage and i have used tailwind css in this project.
               </div>
-              <button className="project-btn">see</button>
+              <a
+                href="https://zomato-homepage-clone.netlify.app"
+                className="project-btn"
+              >
+                see
+              </a>
             </div>
           </div>
           <div className="project-container">
@@ -63,7 +73,12 @@ const Portfolio = () => {
                 This is Game which is made using Javscript language the game is
                 supported in pc only.
               </div>
-              <button className="project-btn">see</button>
+              <a
+                href="https://fruit-basket-game.netlify.app"
+                className="project-btn"
+              >
+                see
+              </a>
             </div>
           </div>
         </div>
