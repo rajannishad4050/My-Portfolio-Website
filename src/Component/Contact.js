@@ -1,23 +1,16 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import "../Styles/contact.css";
 
-const Contact = ({ runContactWheel, thirdScroll }) => {
-  const [animate, setAnimate] = useState(false);
+const Contact = () => {
+  const [animate, setAnimate] = useState(true);
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
 
-  useEffect(() => {
-    if (thirdScroll) {
-      setTimeout(() => {
-        setAnimate(true);
-      }, 950);
-    }
-  }, [thirdScroll]);
-
   return (
     <>
-      <section className="contact" onWheel={runContactWheel}>
+      <section className="contact">
         <div className="contact-area">
           <h1
             className={

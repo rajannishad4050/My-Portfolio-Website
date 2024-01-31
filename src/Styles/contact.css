@@ -1,0 +1,125 @@
+.contact {
+  margin-top: 150px;
+  z-index: 100;
+  background-color: #171616;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.contact-title {
+  text-align: center;
+  color: white;
+  font-size: 2.3rem;
+}
+
+.contact-title-underline {
+  margin-top: 10px;
+  height: 4px;
+  width: 80px;
+  background-color: white;
+  margin-inline: auto;
+}
+
+.contact-para {
+  margin-top: 30px;
+  text-align: center;
+  color: #e31b6d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-inline: 20px;
+}
+
+form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  max-width: 500px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: #1e2023;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  padding: 10px 15px;
+  outline: none;
+  margin-bottom: 5px;
+  margin-inline: 20px;
+}
+
+textarea {
+  max-height: 170px;
+}
+
+.sumbit-btn {
+  margin-left: auto;
+  border: 3px solid white;
+  background-color: transparent;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  padding: 0.4em 1.3em;
+  color: #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.sumbit-btn:hover {
+  background-color: #e31b6d;
+  border-color: #e31b6d;
+}
+
+@media (min-width: 600px) {
+  .sumbit-btn {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .contact {
+  }
+
+  .contact-title {
+    transition: 0.5s ease;
+  }
+
+  .contact-title-animate {
+    translate: -50vh 0;
+  }
+
+  .contact-para {
+    margin-top: 25px;
+  }
+
+  .form {
+    margin-top: 25px;
+    transition: 1s ease;
+  }
+
+  .form-animate {
+    opacity: 0;
+  }
+
+  textArea {
+    max-height: 140px;
+  }
+}
+
+@media (min-width: 800px) {
+  .contact-para {
+    margin-top: 30px;
+  }
+
+  .form {
+    margin-top: 40px;
+  }
+
+  textArea {
+    max-height: 160px;
+  }
+}

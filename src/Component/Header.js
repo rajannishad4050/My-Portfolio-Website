@@ -1,25 +1,47 @@
 import React, { useState, useEffect } from "react";
+import "../Styles/header.css";
 
 const Header = () => {
   const [active, setActive] = useState(false);
 
-  const handleScrolling = (value) => {
-    if (window.innerWidth < 800 || window.innerHeight < 480) {
-      document.body.scrollTop = value;
-      document.documentElement.scrollTop = value;
-    }
+  const handleHomeButtonClicked = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
+    setActive(false);
   };
+
+  const handleAboutButtonClicked = () => {
+    document.body.scrollTop = 650; // For Safari
+    document.documentElement.scrollTop = 650;
+    setActive(false);
+  };
+
+  const handleProjectButtonClicked = () => {
+    document.body.scrollTop = 1312; // For Safari
+    document.documentElement.scrollTop = 1312;
+    setActive(false);
+  };
+
+  const handleContactButtonClicked = () => {
+    document.body.scrollTop = 2822; // For Safari
+    document.documentElement.scrollTop = 2822;
+    setActive(false);
+  };
+
+  //a = 653 p = 1312 c= 2822
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     console.log(document.documentElement.scrollTop, document.body.scrollTop);
+  //   });
+  // }, []);
 
   return (
     <>
-      <header>
+      <header className={active ? "bg-black" : ""}>
         <div className="header-top-section">
           <div
-            onClick={() => {
-              setActive(!active);
-              console.log("hello");
-            }}
-            className="bar-icon"
+            className="bar-icon cursor-pointer"
+            onClick={() => setActive(!active)}
           >
             <div className="bar-line"></div>
             <div className={active ? "bar-line shift" : "bar-line"}></div>
@@ -28,40 +50,16 @@ const Header = () => {
         </div>
         <div className={active ? "header-links active" : "header-links"}>
           <ul>
-            <li
-              className="header-link"
-              onClick={() => {
-                handleScrolling(0);
-                setActive(false);
-              }}
-            >
+            <li className="header-link" onClick={handleHomeButtonClicked}>
               HOME
             </li>
-            <li
-              className="header-link"
-              onClick={() => {
-                handleScrolling(605);
-                setActive(false);
-              }}
-            >
+            <li className="header-link" onClick={handleAboutButtonClicked}>
               ABOUT
             </li>
-            <li
-              className="header-link"
-              onClick={() => {
-                handleScrolling(1470);
-                setActive(false);
-              }}
-            >
+            <li className="header-link" onClick={handleProjectButtonClicked}>
               PORTFOLIO
             </li>
-            <li
-              className="header-link"
-              onClick={() => {
-                handleScrolling(2544.6);
-                setActive(false);
-              }}
-            >
+            <li className="header-link" onClick={handleContactButtonClicked}>
               CONTACTS
             </li>
           </ul>

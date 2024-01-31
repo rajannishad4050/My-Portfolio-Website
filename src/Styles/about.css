@@ -1,0 +1,190 @@
+.about {
+  margin-top: 80px;
+  background-color: #171616;
+  color: white;
+}
+
+.about-main {
+  display: grid;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h1 {
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+.about-underline {
+  margin-top: 10px;
+  width: 55px;
+  background-color: white;
+  height: 4px;
+  margin-inline: auto;
+}
+
+.about-flex-container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  /* translate: 0 20px; */
+  align-items: center;
+}
+
+.about-section-a {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  padding-inline: 15px;
+}
+
+.about-section-a-wrapper {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.img-container {
+  width: 235px;
+  height: 275px;
+  margin-inline: auto;
+}
+
+.photo {
+  width: 100%;
+}
+
+.question {
+  margin-top: 18px;
+  color: rgb(234, 232, 232);
+}
+
+.about-me {
+  max-width: 410px;
+  line-height: 1.4;
+  margin-top: 10px;
+  color: rgb(190, 190, 190);
+  font-size: 1.05rem;
+}
+
+.contact-link {
+  margin-top: 3px;
+  line-height: 1.5rem;
+  font-size: 1.05rem;
+  color: #fd3a8b;
+}
+
+.about-section-b {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.bar {
+  margin-inline: 25px;
+  background-color: #353333;
+}
+
+.bar + .bar {
+  margin-top: 15px;
+}
+
+.tag {
+  width: 140px;
+  background-color: #fd3a8b;
+  text-align: center;
+  padding-block: 6px;
+  width: 110px;
+  font-size: 0.9rem;
+}
+
+.bar-fill {
+  height: inherit;
+  background-color: #e31b6d;
+}
+
+.html-percentage {
+  width: calc(90% - 110px);
+  transition: 1s ease;
+}
+
+.css-percentage {
+  width: calc(90% - 110px);
+  transition: 1s ease;
+}
+
+.javascript-percentage {
+  width: calc(85% - 110px);
+  transition: 1s ease;
+}
+
+.react-percentage {
+  width: calc(85% - 110px);
+  transition: 1s ease;
+}
+
+.redux-percentage {
+  width: calc(66% - 110px);
+  transition: 1s ease;
+}
+
+.sass-percentage {
+  width: calc(66% - 110px);
+  transition: 1s ease;
+}
+
+@media (min-width: 600px) {
+  .bar {
+    margin-inline: 40px;
+  }
+}
+
+@media (min-width: 800px) {
+  .about {
+  }
+
+  .about-main {
+    width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-underline {
+    transition: 0.6s ease;
+  }
+
+  .about-underline-animate {
+    translate: 100vh 0;
+  }
+
+  .about-flex-container {
+    margin-inline: 50px;
+    gap: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .about-section-a {
+    width: 50%;
+  }
+
+  .about-section-b {
+    width: 50%;
+  }
+
+  .bar {
+    margin-inline: 0;
+  }
+
+  .fill-zero {
+    width: 10%;
+  }
+}

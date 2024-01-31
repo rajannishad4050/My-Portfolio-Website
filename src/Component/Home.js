@@ -1,37 +1,23 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import Header from "../Component/Header";
+import "../Styles/home.css";
 
-const Home = ({
-  runHomeWheel,
-  setFirstBack,
-  setFirstScroll,
-  setHomeButtonClick,
-}) => {
+const Home = () => {
+  const handleHomeButtonClicked = () => {
+    document.body.scrollTop = 1312; // For Safari
+    document.documentElement.scrollTop = 1312;
+  };
+
   return (
     <>
-      <section className="home" onWheel={runHomeWheel}>
-        {/* <p className="github">
-          <a className="github-link" href="https://github.com/rajannishad4050">
-            GitHub
-          </a>
-        </p> */}
+      <section className="home">
         <div className="context">
           <div className="text">
             Hello, I'm <span>Rajan Nishad.</span>
             <br />
             I'm a front-end web developer
           </div>
-          <div
-            className="home-btn"
-            onClick={() => {
-              if (window.innerWidth >= 800 && window.innerHeight >= 480) {
-                setFirstBack(false);
-                setFirstScroll(true);
-                setHomeButtonClick(true);
-              }
-            }}
-          >
+          <div className="home-btn" onClick={handleHomeButtonClicked}>
             <p> View my work</p>
             <i className="arrow-right-icon center-items">
               <Icon icon="mdi:arrow-right" color="white" width="20" />

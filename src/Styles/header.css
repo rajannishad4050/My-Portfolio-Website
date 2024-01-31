@@ -1,0 +1,64 @@
+Header {
+  cursor: pointer;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-top-section {
+  padding: 12px 15px;
+}
+
+.bar-icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.bar-line {
+  width: 27px;
+  height: 2.5px;
+  background-color: white;
+}
+
+.shift {
+  translate: 5px 0;
+}
+
+.bar-line:nth-child(3) {
+  height: 2.7px;
+}
+
+.header-links {
+  position: absolute;
+  top: -200px;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.header-links ul {
+  padding: 20px;
+}
+
+.header-links ul li {
+  list-style-type: none;
+}
+
+.header-link + .header-link {
+  margin-top: 20px;
+}
+
+.active {
+  top: 40px;
+}
+
+.bg-black {
+  background-color: black;
+}

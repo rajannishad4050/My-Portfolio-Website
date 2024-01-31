@@ -1,19 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
+import "../Styles/about.css";
 
-const About = ({ runAboutWheel, firstScroll }) => {
-  const [animate, setAnimate] = useState(false);
-
-  useEffect(() => {
-    if (firstScroll) {
-      setTimeout(() => {
-        setAnimate(true);
-      }, 1000);
-    }
-  }, [firstScroll]);
+const About = () => {
+  const [animate, setAnimate] = useState(true);
 
   return (
     <>
-      <section className="about" onWheel={runAboutWheel}>
+      <section className="about">
         <div className="about-main">
           <div className="about-text">
             <h1>About</h1>
