@@ -7,6 +7,30 @@ const Contact = () => {
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
+  const [notes, setNotes] = useState(false);
+  const [count, setCount] = useState(false);
+
+  const onSubmit = (e) => {
+    localStorage.setItem("message", messageInput);
+    e.preventDefault();
+    setEmailInput("");
+    setNameInput("");
+    setMessageInput("");
+    if (nameInput === "notes") {
+      setNotes(true);
+    }
+  };
+
+  const fetch = (e) => {
+    e.preventDefault();
+    const storedItem = localStorage.getItem("message");
+    console.log(storedItem);
+    setMessageInput(storedItem);
+  };
+
+  useEffect(() => {
+    setCount(messageInput.length);
+  }, [messageInput]);
 
   return (
     <>
@@ -46,21 +70,20 @@ const Contact = () => {
             name="message-input"
             id="message-holder"
             cols="30"
-            rows="10"
+            rows={notes ? "20" : "10"}
             value={messageInput}
             onChange={(e) => setMessageInput(e.target.value)}
           ></textarea>
           <button
             className="sumbit-btn"
             onClick={(e) => {
-              e.preventDefault();
-              setEmailInput("");
-              setNameInput("");
-              setMessageInput("");
+              onSubmit(e);
             }}
           >
             SUMBIT
           </button>
+          {notes ? <p style={{ color: "white" }}>{count}</p> : ""}
+          {notes ? <button onClick={(e) => fetch(e)}>fetch</button> : ""}
         </form>
       </section>
     </>
